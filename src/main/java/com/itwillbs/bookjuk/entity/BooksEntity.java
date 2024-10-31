@@ -29,7 +29,7 @@ import lombok.ToString;
 @Builder
 public class BooksEntity {
 	
-	// 책번호
+	// 책번호 자동으로 1씩 증가
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long bookNum;
