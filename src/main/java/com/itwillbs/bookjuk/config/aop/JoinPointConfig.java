@@ -20,6 +20,7 @@ public class JoinPointConfig {
 
 
 
+
     //to intercept method calls for both layers:
 //    @Pointcut("io..springaop..aspect.JoinPointConfig.dataLayerPointcut() || "
 //            + "io..springaop..aspect.JoinPointConfig.businessLayerPointcut()")
