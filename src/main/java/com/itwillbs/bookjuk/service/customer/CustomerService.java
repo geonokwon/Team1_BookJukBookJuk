@@ -36,6 +36,10 @@ public class CustomerService {
 	public void addStore(StoreEntity storeEntity) {
 		storeRepository.save(storeEntity);
 	}
+
+	public Page<StoreEntity> findByStoreNameContaining(Pageable pageable, String search) {
+		return storeRepository.findByStoreNameContaining(pageable, search);
+	}
 	
 	// 검색어포함 페이지네이션 함수
 	public Page<StoreEntity> findByStoreNameContaining(Pageable pageable, String search) {
