@@ -5,6 +5,7 @@ import com.itwillbs.bookjuk.service.pay.PaymentService;
 
 import java.util.Map;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
