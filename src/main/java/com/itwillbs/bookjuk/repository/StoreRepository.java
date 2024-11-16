@@ -48,4 +48,6 @@ public interface StoreRepository extends JpaRepository<StoreEntity, Long> {
 
 	List<StoreEntity> findAllStoreNameByStoreStatus(String storeStatus);
 
+	List<StoreEntity> findAllStoreNameByStoreStatus(String storeStatus);
+
 }
