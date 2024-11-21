@@ -1,20 +1,15 @@
 package com.itwillbs.bookjuk.event;
 
-import java.sql.Time;
-import java.sql.Timestamp;
-
+import com.itwillbs.bookjuk.entity.event.EventEntity;
+import com.itwillbs.bookjuk.repository.UserRepository;
+import com.itwillbs.bookjuk.repository.event.EventRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.itwillbs.bookjuk.entity.event.EventEntity;
-import com.itwillbs.bookjuk.repository.UserRepository;
-import com.itwillbs.bookjuk.repository.event.EventRepository;
-
-import lombok.extern.slf4j.Slf4j;
+import java.sql.Timestamp;
 
 @SpringBootTest
-@Slf4j
 public class EventTest {
 	@Autowired
 	private EventRepository eventRepository;
