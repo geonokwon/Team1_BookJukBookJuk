@@ -38,7 +38,7 @@
   <summary>WBS</summary>
   
   <!-- WBS Images -->
-  ![WBS](/WishD/images/WIshD(WBS).png)
+  ![WBS](/images/BookJuk(WBS).png)
   
 </details>
 
@@ -46,8 +46,16 @@
   <summary>ERD</summary>
   
   <!-- WBS Images -->
-  ![WBS](/WishD/images/WishD(ERD).png)
-  [ERD Cloud - web 주소](https://www.erdcloud.com/d/rfkQRZTjBnvQHALp2)
+  ![WBS](/images/BookJuk(ERD).png)
+  [ERD Cloud - web 주소](https://www.erdcloud.com/d/f3NxHWtQCdWs9s87p)
+  
+</details>
+
+<details>
+  <summary>외부모니터링 Architecture</summary>
+  
+  <!-- WBS Images -->
+  ![WBS](/images/BookJuk(Architecture).png)
   
 </details>
 
@@ -55,10 +63,10 @@
   <summary>주요 작업(Front)</summary>
   
   <!-- Front Images -->
-  ![Front - 주요 작업](/WishD/images/WishD(Front)-1.png)
-  ![Front - 주요 작업](/WishD/images/WishD(Front)-2.png)
-  ![Front - 주요 작업](/WishD/images/WishD(Front)-3.png)
-  ![Front - 주요 작업](/WishD/images/WishD(Front)-4.png)
+  ![Front - 주요 작업](/images/BookJuk(Front)-1.png)
+  ![Front - 주요 작업](/images/BookJuk(Front)-2.png)
+  ![Front - 주요 작업](/images/BookJuk(Front)-3.png)
+  ![Front - 주요 작업](/images/BookJuk(Front)-4.png)
   
 </details>
 
