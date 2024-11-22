@@ -334,13 +334,14 @@ public class EventService {
 //    	List<EventConditionEntity> eventConditionEntities = filterEvent(eventConditionEntiti);
 //    	log.info("Existing Event eventConditionEntities: {}", eventConditionEntities);
     	// 없으면 함수 종료
-    	if(eventConditionEntities.isEmpty()) { 
+    	if(eventConditionEntities.isEmpty()) {
     		log.info("==============================================");
-    		return; 
+    		return;
     	}
     	
     	// 유저 엔티티와 이벤트 컨디션에 따른 이벤트 카운트 조회
     	for (EventConditionEntity eventConditionEntity : eventConditionEntities) {
+    		if(!eventCountRepository.existsByEventConditionIdAndClearEventTrue(eventConditionEntity)) {
     			EventCountEntity eventCountEntity = checkEventCount(user, eventConditionEntity);
 	    		int countValue = "대여 횟수".equals(eventConditionEntity.getEventConditionType()) ? numberOfRental : rentalAmount;
 	    		boolean isClear = false;
@@ -365,7 +366,7 @@ public class EventService {
 	    	    }
 	    		if(isClear) {
 	    			String coupon;
-	        		// 쿠폰 번호 생성(db에 중복된 쿠폰 번호가 있으면 중복 안될때까지 랜덤 문자 함수 호출) 
+	        		// 쿠폰 번호 생성(db에 중복된 쿠폰 번호가 있으면 중복 안될때까지 랜덤 문자 함수 호출)
 	    	        do {
 	    	            coupon = CouponUtil.generateRandomCouponNum(16);
 	    	        } while (couponRepository.existsByCouponNum(coupon));
@@ -382,7 +383,7 @@ public class EventService {
 	    					.notiSentDate(new Timestamp(System.currentTimeMillis()))
 	    					.build();
 	    			notificationRepository.save(notificationEntity);
-	    			
+
 	    			// 쿠폰 생성
 	    			CouponEntity couponEntity = CouponEntity.builder()
 	    					.eventId(eventConditionEntity.getEventId())
@@ -395,7 +396,7 @@ public class EventService {
 	    					.couponType(eventConditionEntity.getEventClearReward())
 	    					.build();
 	    			couponRepository.save(couponEntity);
-	    			
+
 	    			// noti_check 생성
 	    			NotiCheckEntity notiCheckEntity = NotiCheckEntity.builder()
 	    					.notiId(notificationEntity)
@@ -405,6 +406,7 @@ public class EventService {
 	    			notiCheckRepository.save(notiCheckEntity);
 	    		}
     		}
+    	}
     }
 
     @Transactional
