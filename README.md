@@ -52,10 +52,10 @@
 </details>
 
 <details>
-  <summary>외부모니터링 Architecture</summary>
+  <summary>외부모니터링 Architecture</summary>
   
   <!-- WBS Images -->
-  ![WBS](/images/BookJuk(Architecture).png)
+  ![Architecture](/images/BookJuk(Architecture).png)
   
 </details>
 
