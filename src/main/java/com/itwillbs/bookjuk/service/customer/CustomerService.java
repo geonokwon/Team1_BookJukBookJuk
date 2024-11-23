@@ -21,13 +21,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 public class CustomerService {
-	
+
 	private final StoreRepository storeRepository;
-	
+
 	private final UserRepository userRepository;
-	
+
 	private final UserContentRepository userContentRepository;
-	
+
 	public Page<StoreEntity> getStoreList(Pageable pageable) {
 		return storeRepository.findAll(pageable);
 	}
@@ -37,15 +37,11 @@ public class CustomerService {
 		storeRepository.save(storeEntity);
 	}
 
-	public Page<StoreEntity> findByStoreNameContaining(Pageable pageable, String search) {
-		return storeRepository.findByStoreNameContaining(pageable, search);
-	}
-	
 	// 검색어포함 페이지네이션 함수
 	public Page<StoreEntity> findByStoreNameContaining(Pageable pageable, String search) {
 		return storeRepository.findByStoreNameContaining(pageable, search);
 	}
-	
+
 	// 한 지점정보를 가져오는 함수
 	public Optional<StoreEntity> findById(Long storeCode) {
 		return storeRepository.findById(storeCode);
@@ -55,7 +51,7 @@ public class CustomerService {
 		storeEntity.setStoreStatus("open");
 		storeRepository.save(storeEntity);
 	}
-	
+
 	public void deleteStore(Long storeCode, String status) {
 		storeRepository.deleteStore(storeCode, status);
 	}
@@ -79,6 +75,6 @@ public class CustomerService {
 	public void deleteUser(Long string, Boolean status) {
 		storeRepository.deleteUser(string, status);
 	}
-	
-	
+
+
 }
