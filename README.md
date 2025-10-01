@@ -10,7 +10,7 @@
   </tr>
   <tr>
     <th>사용기술</th>
-    <td>SSpring Boot 3.3.4, Thymeleaf, JPA</td>
+    <td>Spring Boot 3.3.4, Thymeleaf, JPA</td>
   </tr>
   <tr>
     <th>개발 목적</th>
